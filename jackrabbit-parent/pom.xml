@@ -97,6 +97,7 @@
       <!-- JCR-704: Enable maven-source-plugin -->
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
+        <version>2.0.4</version>
         <executions>
           <execution>
             <id>attach-sources</id>
