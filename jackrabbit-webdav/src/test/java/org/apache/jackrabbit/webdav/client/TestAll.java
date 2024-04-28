@@ -17,6 +17,7 @@
 package org.apache.jackrabbit.webdav.client;
 
 import org.apache.jackrabbit.webdav.client.methods.DavMethodTest;
+import org.apache.jackrabbit.webdav.client.methods.ParserTest;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -29,6 +30,7 @@ public class TestAll extends TestCase {
 
         suite.addTestSuite(DavMethodTest.class);
         suite.addTestSuite(XmlRequestEntityTest.class);
+        suite.addTestSuite(ParserTest.class);
 
         return suite;
     }
