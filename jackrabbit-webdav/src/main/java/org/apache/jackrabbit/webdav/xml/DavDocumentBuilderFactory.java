@@ -32,7 +32,7 @@ import org.xml.sax.helpers.DefaultHandler;
 /**
  * Custom {@link DocumentBuilderFactory} extended for use in WebDAV.
  */
-public class DavDocumentBuilderFactory {
+public class DavDocumentBuilderFactory extends DocumentBuilderFactory {
 
     private static final Logger LOG = LoggerFactory.getLogger(DomUtil.class);
 
@@ -82,5 +82,21 @@ public class DavDocumentBuilderFactory {
         }
         db.setErrorHandler(new DefaultHandler());
         return db;
+    }
+
+    public Object getAttribute(String name) throws IllegalArgumentException {
+        return BUILDER_FACTORY.getAttribute(name);
+    }
+
+    public boolean getFeature(String name) throws ParserConfigurationException {
+        return BUILDER_FACTORY.getFeature(name);
+    }
+
+    public void setAttribute(String name, Object value) throws IllegalArgumentException {
+        BUILDER_FACTORY.setAttribute(name, value);
+    }
+
+    public void setFeature(String name, boolean value) throws ParserConfigurationException {
+        BUILDER_FACTORY.setFeature(name, value);
     }
 }
