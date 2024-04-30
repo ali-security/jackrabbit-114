@@ -40,10 +40,10 @@ public class DomUtil {
     private static Logger log = LoggerFactory.getLogger(DomUtil.class);
 
     /**
-     * Constant for <code>DavDocumentBuilderFactory</code> which is used
+     * Constant for <code>DocumentBuilderFactory</code> which is used
      * widely to create new <code>Document</code>s
      */
-    public static DavDocumentBuilderFactory BUILDER_FACTORY = new DavDocumentBuilderFactory();
+    public static DocumentBuilderFactory BUILDER_FACTORY = new DavDocumentBuilderFactory();
 
     /**
      * Returns the value of the named attribute of the current element.
